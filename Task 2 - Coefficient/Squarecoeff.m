@@ -7,7 +7,7 @@ close all
 clear all
 clc
 
-N=16; %Val av antal Koefficienter vi vill plotta
+N=128; %Val av antal Koefficienter vi vill plotta
 T0=4; %periodtiden för den periodiska signalen
 
 ak=zeros(1,N);
