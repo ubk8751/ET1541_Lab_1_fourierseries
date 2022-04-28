@@ -2,12 +2,12 @@ close all
 clear all
 clc
 
-N=128; % Number of coefficients
+N=16; % Number of coefficients
 T0=4; % The period
 
 ak=zeros(1,N);
 for k=1:2:N
-    ak(k)=(-4/((k^2)*(pi^2)));
+    ak(k)=(-2/((k^2)*(pi^2)));
 end
 ak=[0.5 ak]; % add a0
 
@@ -31,13 +31,6 @@ ylabel('Magnitude');
 
 % Automatic calculation of the coefficients using FFT (triangle wave version)
 [a0,a]=fcoeff('triangel',T0,N); 
-figure
-stem(0:N,abs([a0 a]))
-xlabel('Coeff k');
-ylabel('Magnitude');
-
-% Automatic calculation of the coefficients using FFT (pulse version)
-[a0,a]=fcoeff('puls',T0,N); 
 figure
 stem(0:N,abs([a0 a]))
 xlabel('Coeff k');

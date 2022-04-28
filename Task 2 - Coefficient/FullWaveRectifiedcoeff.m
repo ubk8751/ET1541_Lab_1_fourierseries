@@ -2,14 +2,15 @@ close all
 clear all
 clc
 
-N=128; % Number of coefficients
+N=16; % Number of coefficients
 T0=4; % The period
+anoll = 2/pi; % define a0
 
 ak=zeros(1,N);
-for k=1:2:N
-    ak(k)=(4/(pi*(1-4*k^2)));
+for k=1:N
+    ak(k)=(2/(pi*(1-4*k^2)));
 end
-ak=[0.5 ak]; % add a0
+ak=[anoll ak]; % add a0
 
 % Plot the coefficients with the original sign
 stem(0:N,ak)
@@ -31,7 +32,7 @@ ylabel('Magnitude');
 
 
 % Automatic calculation of the coefficients using FFT (pulse version)
-[a0,a]=fcoeff('fullrect',T0,N); 
+[a0,a]=fcoeff('fullrect',T0,N);
 figure
 stem(0:N,abs([a0 a]))
 xlabel('Coeff k');

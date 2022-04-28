@@ -26,6 +26,7 @@ plot(t,x)
 title(['Plot av ' fun ' funktionen'] )
 
 X=fft(x);
+plot(abs(X))
 a0=(1/N)*X(1);
 a=(1/N)*X(2:index+1);
 a=a(:).';

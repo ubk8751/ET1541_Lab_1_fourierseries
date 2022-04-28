@@ -1,3 +1,3 @@
 function f=fullrect(t)
 
-f = abs(sin(pi*t));
+f = abs(sin(2 * pi * t / 4));
