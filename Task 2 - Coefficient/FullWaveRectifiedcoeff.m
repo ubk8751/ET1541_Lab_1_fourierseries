@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-N=16; % Number of coefficients
+N=128; % Number of coefficients
 T0=4; % The period
 anoll = 2/pi; % define a0
 

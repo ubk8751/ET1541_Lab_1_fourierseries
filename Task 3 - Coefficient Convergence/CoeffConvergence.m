@@ -5,11 +5,11 @@ close all
 clear all
 clc
 
-k=1; %välj koefficient ak
-Nmax=64; %Maximal antal sampel under signalens ena period
-ak=[]; %tom vektor för att spara olika 
+k=1; % välj koefficient ak
+Nmax=64; % Maximal antal sampel under signalens ena period
+ak=[]; % tom vektor för att spara olika 
 for N=4:4:Nmax
-    f=[ones(1,N/4) zeros(1,N/2) ones(1,N/4)];%skapa den samplad fyrkantsvåg över en period 0 till 2*pi  
+    f=[ones(1,N/4) zeros(1,N/2) ones(1,N/4)]; % skapa den samplad fyrkantsvåg över en period 0 till 2*pi  
     akN=0;%nollställ parametern
     for n=0:N-1
         %formeln tagen ur formelsamling s.12 i kap. 1.6.2
